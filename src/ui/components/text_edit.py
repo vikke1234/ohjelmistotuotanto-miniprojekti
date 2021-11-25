@@ -26,8 +26,7 @@ class TextEdit:
         rectangle(stdscr, y-1, x-1, y + 1, x + width)
 
         stdscr.refresh()
-        box = Textbox(editwin)
-        box.edit(self._validator)
+        self._box = Textbox(editwin)
 
     @staticmethod
     def _validator(key) -> int:
