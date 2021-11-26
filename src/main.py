@@ -1,9 +1,15 @@
-from curses import wrapper
-from ui.tui import Tui
+import sys
 
-def main(stdscr):
-    tui = Tui(stdscr)
-    tui.hello_world()
+from PyQt5.Qt import QApplication
+
+from gui.main_window import MainWindow
+
+
+def main():
+    app = QApplication(sys.argv)
+    mainwindow = MainWindow()
+    mainwindow.show()
+    app.exec_()
 
 if __name__ == "__main__":
-    wrapper(main)
+    main()
