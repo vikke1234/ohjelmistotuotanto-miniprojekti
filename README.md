@@ -12,3 +12,7 @@ poetry run invoke start
 ```sh
 poetry run invoke qtgen
 ```
+
+
+### Backlog
+https://docs.google.com/spreadsheets/d/1r9CDM0Wv7Pt1SwhfaGoQBJD6Y9coEpHTB04byvhgGoU/edit#gid=7
