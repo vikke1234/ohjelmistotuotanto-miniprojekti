@@ -15,4 +15,4 @@ poetry run invoke qtgen
 
 
 ### Backlog
-https://docs.google.com/spreadsheets/d/1r9CDM0Wv7Pt1SwhfaGoQBJD6Y9coEpHTB04byvhgGoU/edit#gid=7
+https://vikke.youtrack.cloud/agiles/121-2/current?backlog
