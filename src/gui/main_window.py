@@ -15,9 +15,10 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         """
         Adds the content of the url line edit to the saved tips list
         """
-        text = self.url_lineedit.text()
+        text = self.titleLineEdit.text() + " - " + self.linkLineEdit.text()
         item = QListWidgetItem()
         item.setText(text)
         current = self.listWidget.count()
         self.listWidget.insertItem(current+1, item)
-        self.url_lineedit.setText("")
+        self.titleLineEdit.setText("")
+        self.linkLineEdit.setText("")

@@ -18,19 +18,40 @@
     <item>
      <layout class="QHBoxLayout" name="horizontalLayout">
       <item>
-       <widget class="QLineEdit" name="url_lineedit"/>
+       <layout class="QFormLayout" name="formLayout">
+        <item row="1" column="0">
+         <widget class="QLabel" name="titleLabel">
+          <property name="text">
+           <string>Title</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QLineEdit" name="titleLineEdit"/>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="linkLabel">
+          <property name="text">
+           <string>Link</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QLineEdit" name="linkLineEdit"/>
+        </item>
+        <item row="3" column="1">
+         <widget class="QPushButton" name="add_button">
+          <property name="text">
+           <string>Add</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
       </item>
       <item>
-       <widget class="QPushButton" name="add_button">
-        <property name="text">
-         <string>Add</string>
-        </property>
-       </widget>
+       <widget class="QListWidget" name="listWidget"/>
       </item>
      </layout>
-    </item>
-    <item>
-     <widget class="QListWidget" name="listWidget"/>
     </item>
    </layout>
   </widget>
@@ -40,7 +61,7 @@
      <x>0</x>
      <y>0</y>
      <width>801</width>
-     <height>30</height>
+     <height>22</height>
     </rect>
    </property>
   </widget>
