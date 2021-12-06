@@ -92,240 +92,200 @@
            <number>0</number>
           </property>
           <widget class="QWidget" name="page_3">
-           <widget class="QWidget" name="formLayoutWidget">
-            <property name="geometry">
-             <rect>
-              <x>0</x>
-              <y>10</y>
-              <width>291</width>
-              <height>311</height>
-             </rect>
-            </property>
-            <layout class="QFormLayout" name="formLayout">
-             <item row="4" column="0">
-              <widget class="QLabel" name="nameLabel">
-               <property name="text">
-                <string>Author</string>
-               </property>
-              </widget>
-             </item>
-             <item row="4" column="1">
-              <widget class="QLineEdit" name="nameLineEdit"/>
-             </item>
-             <item row="5" column="0">
-              <widget class="QLabel" name="titleLabel">
-               <property name="text">
-                <string>Title</string>
-               </property>
-              </widget>
-             </item>
-             <item row="5" column="1">
-              <widget class="QLineEdit" name="iSBNLineEdit"/>
-             </item>
-             <item row="6" column="0">
-              <widget class="QLabel" name="iSBNLabel">
-               <property name="text">
-                <string>ISBN</string>
-               </property>
-              </widget>
-             </item>
-             <item row="6" column="1">
-              <widget class="QLineEdit" name="titleLineEdit"/>
-             </item>
-             <item row="7" column="0">
-              <widget class="QLabel" name="linkLabel">
-               <property name="text">
-                <string>Tags</string>
-               </property>
-              </widget>
-             </item>
-             <item row="7" column="1">
-              <widget class="QLineEdit" name="linkLineEdit"/>
-             </item>
-             <item row="8" column="0">
-              <widget class="QLabel" name="commentLabel_2">
-               <property name="text">
-                <string>Comment</string>
-               </property>
-              </widget>
-             </item>
-             <item row="8" column="1">
-              <widget class="QLineEdit" name="commentLineEdit_2"/>
-             </item>
-            </layout>
-           </widget>
+           <layout class="QFormLayout" name="formLayout_2">
+            <item row="5" column="0">
+             <widget class="QLabel" name="commentLabel_2">
+              <property name="text">
+               <string>Comment</string>
+              </property>
+             </widget>
+            </item>
+            <item row="5" column="1">
+             <widget class="QLineEdit" name="commentLineEdit_2"/>
+            </item>
+            <item row="4" column="0">
+             <widget class="QLabel" name="linkLabel">
+              <property name="text">
+               <string>Tags</string>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="1">
+             <widget class="QLineEdit" name="linkLineEdit"/>
+            </item>
+            <item row="3" column="0">
+             <widget class="QLabel" name="iSBNLabel">
+              <property name="text">
+               <string>ISBN</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="1">
+             <widget class="QLineEdit" name="titleLineEdit"/>
+            </item>
+            <item row="2" column="0">
+             <widget class="QLabel" name="titleLabel">
+              <property name="text">
+               <string>Title</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="1">
+             <widget class="QLineEdit" name="iSBNLineEdit"/>
+            </item>
+            <item row="1" column="1">
+             <widget class="QLineEdit" name="nameLineEdit"/>
+            </item>
+            <item row="1" column="0">
+             <widget class="QLabel" name="nameLabel">
+              <property name="text">
+               <string>Author</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
           </widget>
           <widget class="QWidget" name="page_1">
-           <widget class="QWidget" name="formLayoutWidget_2">
-            <property name="geometry">
-             <rect>
-              <x>0</x>
-              <y>10</y>
-              <width>291</width>
-              <height>311</height>
-             </rect>
-            </property>
-            <layout class="QFormLayout" name="formLayout_3">
-             <item row="1" column="1">
-              <widget class="QLineEdit" name="nameLineEdit_2"/>
-             </item>
-             <item row="1" column="0">
-              <widget class="QLabel" name="nameLabel_2">
-               <property name="text">
-                <string>Author</string>
-               </property>
-              </widget>
-             </item>
-             <item row="2" column="1">
-              <widget class="QLineEdit" name="iSBNLineEdit_2"/>
-             </item>
-             <item row="3" column="1">
-              <widget class="QLineEdit" name="titleLineEdit_2"/>
-             </item>
-             <item row="2" column="0">
-              <widget class="QLabel" name="titleLabel_2">
-               <property name="text">
-                <string>Title</string>
-               </property>
-              </widget>
-             </item>
-             <item row="3" column="0">
-              <widget class="QLabel" name="iSBNLabel_2">
-               <property name="text">
-                <string>Description</string>
-               </property>
-              </widget>
-             </item>
-             <item row="4" column="1">
-              <widget class="QLineEdit" name="tagsLineEdit_2"/>
-             </item>
-             <item row="4" column="0">
-              <widget class="QLabel" name="tagsLabel_2">
-               <property name="text">
-                <string>Tags</string>
-               </property>
-              </widget>
-             </item>
-             <item row="5" column="0">
-              <widget class="QLabel" name="commentLabel_4">
-               <property name="text">
-                <string>Comment</string>
-               </property>
-              </widget>
-             </item>
-             <item row="5" column="1">
-              <widget class="QLineEdit" name="commentLineEdit_4"/>
-             </item>
-            </layout>
-           </widget>
+           <layout class="QFormLayout" name="formLayout_4">
+            <item row="0" column="0">
+             <widget class="QLabel" name="nameLabel_2">
+              <property name="text">
+               <string>Author</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QLineEdit" name="nameLineEdit_2"/>
+            </item>
+            <item row="1" column="0">
+             <widget class="QLabel" name="titleLabel_2">
+              <property name="text">
+               <string>Title</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <widget class="QLineEdit" name="iSBNLineEdit_2"/>
+            </item>
+            <item row="2" column="0">
+             <widget class="QLabel" name="iSBNLabel_2">
+              <property name="text">
+               <string>Description</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="1">
+             <widget class="QLineEdit" name="titleLineEdit_2"/>
+            </item>
+            <item row="3" column="0">
+             <widget class="QLabel" name="tagsLabel_2">
+              <property name="text">
+               <string>Tags</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="1">
+             <widget class="QLineEdit" name="tagsLineEdit_2"/>
+            </item>
+            <item row="4" column="0">
+             <widget class="QLabel" name="commentLabel_4">
+              <property name="text">
+               <string>Comment</string>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="1">
+             <widget class="QLineEdit" name="commentLineEdit_4"/>
+            </item>
+           </layout>
           </widget>
           <widget class="QWidget" name="page_2">
-           <widget class="QWidget" name="formLayoutWidget_3">
-            <property name="geometry">
-             <rect>
-              <x>0</x>
-              <y>20</y>
-              <width>291</width>
-              <height>311</height>
-             </rect>
-            </property>
-            <layout class="QFormLayout" name="formLayout_4">
-             <item row="1" column="0">
-              <widget class="QLabel" name="titleLabel_3">
-               <property name="text">
-                <string>Title</string>
-               </property>
-              </widget>
-             </item>
-             <item row="1" column="1">
-              <widget class="QLineEdit" name="iSBNLineEdit_3"/>
-             </item>
-             <item row="2" column="0">
-              <widget class="QLabel" name="iSBNLabel_3">
-               <property name="text">
-                <string>Url</string>
-               </property>
-              </widget>
-             </item>
-             <item row="2" column="1">
-              <widget class="QLineEdit" name="titleLineEdit_3"/>
-             </item>
-             <item row="4" column="0">
-              <widget class="QLabel" name="tagsLabel">
-               <property name="text">
-                <string>Tags</string>
-               </property>
-              </widget>
-             </item>
-             <item row="4" column="1">
-              <widget class="QLineEdit" name="tagsLineEdit"/>
-             </item>
-             <item row="5" column="0">
-              <widget class="QLabel" name="commentLabel">
-               <property name="text">
-                <string>Comment</string>
-               </property>
-              </widget>
-             </item>
-             <item row="5" column="1">
-              <widget class="QLineEdit" name="commentLineEdit"/>
-             </item>
-            </layout>
-           </widget>
+           <layout class="QFormLayout" name="formLayout_5">
+            <item row="1" column="0">
+             <widget class="QLabel" name="titleLabel_3">
+              <property name="text">
+               <string>Title</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <widget class="QLineEdit" name="iSBNLineEdit_3"/>
+            </item>
+            <item row="2" column="0">
+             <widget class="QLabel" name="iSBNLabel_3">
+              <property name="text">
+               <string>Url</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="1">
+             <widget class="QLineEdit" name="titleLineEdit_3"/>
+            </item>
+            <item row="3" column="0">
+             <widget class="QLabel" name="tagsLabel">
+              <property name="text">
+               <string>Tags</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="1">
+             <widget class="QLineEdit" name="tagsLineEdit"/>
+            </item>
+            <item row="4" column="0">
+             <widget class="QLabel" name="commentLabel">
+              <property name="text">
+               <string>Comment</string>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="1">
+             <widget class="QLineEdit" name="commentLineEdit"/>
+            </item>
+           </layout>
           </widget>
           <widget class="QWidget" name="page_4">
-           <widget class="QWidget" name="formLayoutWidget_4">
-            <property name="geometry">
-             <rect>
-              <x>0</x>
-              <y>10</y>
-              <width>291</width>
-              <height>311</height>
-             </rect>
-            </property>
-            <layout class="QFormLayout" name="formLayout_5">
-             <item row="3" column="1">
-              <widget class="QLineEdit" name="iSBNLineEdit_4"/>
-             </item>
-             <item row="4" column="1">
-              <widget class="QLineEdit" name="titleLineEdit_4"/>
-             </item>
-             <item row="3" column="0">
-              <widget class="QLabel" name="titleLabel_4">
-               <property name="text">
-                <string>Title</string>
-               </property>
-              </widget>
-             </item>
-             <item row="5" column="0">
-              <widget class="QLabel" name="iSBNLabel_4">
-               <property name="text">
-                <string>Url</string>
-               </property>
-              </widget>
-             </item>
-             <item row="4" column="0">
-              <widget class="QLabel" name="nameLabel_4">
-               <property name="text">
-                <string>Author</string>
-               </property>
-              </widget>
-             </item>
-             <item row="5" column="1">
-              <widget class="QLineEdit" name="nameLineEdit_4"/>
-             </item>
-             <item row="6" column="0">
-              <widget class="QLabel" name="commentLabel_3">
-               <property name="text">
-                <string>Comment</string>
-               </property>
-              </widget>
-             </item>
-             <item row="6" column="1">
-              <widget class="QLineEdit" name="commentLineEdit_3"/>
-             </item>
-            </layout>
-           </widget>
+           <layout class="QFormLayout" name="formLayout">
+            <item row="0" column="0">
+             <widget class="QLabel" name="titleLabel_4">
+              <property name="text">
+               <string>Title</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QLineEdit" name="iSBNLineEdit_4"/>
+            </item>
+            <item row="1" column="0">
+             <widget class="QLabel" name="nameLabel_4">
+              <property name="text">
+               <string>Author</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <widget class="QLineEdit" name="titleLineEdit_4"/>
+            </item>
+            <item row="2" column="0">
+             <widget class="QLabel" name="iSBNLabel_4">
+              <property name="text">
+               <string>Url</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="1">
+             <widget class="QLineEdit" name="nameLineEdit_4"/>
+            </item>
+            <item row="3" column="0">
+             <widget class="QLabel" name="commentLabel_3">
+              <property name="text">
+               <string>Comment</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="1">
+             <widget class="QLineEdit" name="commentLineEdit_3"/>
+            </item>
+           </layout>
           </widget>
          </widget>
         </item>
