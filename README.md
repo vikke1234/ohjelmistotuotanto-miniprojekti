@@ -16,3 +16,7 @@ poetry run invoke qtgen
 
 ### Backlog
 https://vikke.youtrack.cloud/agiles/121-2/current?backlog
+
+### Definition of Done
+  Shippable Product
+  CI passing
