@@ -36,4 +36,3 @@ class TipModel(QAbstractListModel):
                 if v != "":
                     s += f"{k}: {v}\n"
             return s
-

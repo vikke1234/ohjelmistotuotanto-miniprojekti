@@ -33,4 +33,4 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             if label is not None and line_edit is not None:
                 item[label.widget().text().lower()] = line_edit.widget().text()
         self.listView.model().append_item(item)
-
+        
