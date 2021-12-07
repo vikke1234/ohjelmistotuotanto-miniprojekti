@@ -15,7 +15,7 @@ poetry run invoke qtgen
 
 
 ### Backlog
-https://vikke.youtrack.cloud/agiles/121-2/current?backlog
+https://docs.google.com/spreadsheets/d/1r9CDM0Wv7Pt1SwhfaGoQBJD6Y9coEpHTB04byvhgGoU/edit#gid=1
 
 ### Definition of Done
   Shippable Product
