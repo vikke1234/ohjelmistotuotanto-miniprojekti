@@ -36,7 +36,7 @@
         <item>
          <layout class="QHBoxLayout" name="horizontalLayout">
           <item>
-           <widget class="QComboBox" name="comboBox">
+           <widget class="QComboBox" name="typeComboBox">
             <property name="minimumSize">
              <size>
               <width>200</width>
@@ -60,7 +60,7 @@
             </item>
             <item>
              <property name="text">
-              <string>BlogPost</string>
+              <string>Blog post</string>
              </property>
             </item>
            </widget>
@@ -89,9 +89,9 @@
            </sizepolicy>
           </property>
           <property name="currentIndex">
-           <number>0</number>
+           <number>3</number>
           </property>
-          <widget class="QWidget" name="page_3">
+          <widget class="QWidget" name="book_page">
            <layout class="QFormLayout" name="formLayout_2">
             <item row="5" column="0">
              <widget class="QLabel" name="commentLabel_2">
@@ -145,7 +145,7 @@
             </item>
            </layout>
           </widget>
-          <widget class="QWidget" name="page_1">
+          <widget class="QWidget" name="podcast_page">
            <layout class="QFormLayout" name="formLayout_4">
             <item row="0" column="0">
              <widget class="QLabel" name="nameLabel_2">
@@ -197,9 +197,19 @@
             <item row="4" column="1">
              <widget class="QLineEdit" name="commentLineEdit_4"/>
             </item>
+            <item row="5" column="0">
+             <widget class="QLabel" name="label_3">
+              <property name="text">
+               <string>URL</string>
+              </property>
+             </widget>
+            </item>
+            <item row="5" column="1">
+             <widget class="QLineEdit" name="lineEdit"/>
+            </item>
            </layout>
           </widget>
-          <widget class="QWidget" name="page_2">
+          <widget class="QWidget" name="video_page">
            <layout class="QFormLayout" name="formLayout_5">
             <item row="1" column="0">
              <widget class="QLabel" name="titleLabel_3">
@@ -214,7 +224,7 @@
             <item row="2" column="0">
              <widget class="QLabel" name="iSBNLabel_3">
               <property name="text">
-               <string>Url</string>
+               <string>URL</string>
               </property>
              </widget>
             </item>
@@ -243,7 +253,7 @@
             </item>
            </layout>
           </widget>
-          <widget class="QWidget" name="page_4">
+          <widget class="QWidget" name="blogpost_page">
            <layout class="QFormLayout" name="formLayout">
             <item row="0" column="0">
              <widget class="QLabel" name="titleLabel_4">
@@ -268,7 +278,7 @@
             <item row="2" column="0">
              <widget class="QLabel" name="iSBNLabel_4">
               <property name="text">
-               <string>Url</string>
+               <string>URL</string>
               </property>
              </widget>
             </item>
@@ -359,10 +369,34 @@
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
+ <tabstops>
+  <tabstop>nameLineEdit</tabstop>
+  <tabstop>iSBNLineEdit</tabstop>
+  <tabstop>titleLineEdit</tabstop>
+  <tabstop>linkLineEdit</tabstop>
+  <tabstop>commentLineEdit_2</tabstop>
+  <tabstop>add_button</tabstop>
+  <tabstop>typeComboBox</tabstop>
+  <tabstop>listView</tabstop>
+  <tabstop>nameLineEdit_2</tabstop>
+  <tabstop>iSBNLineEdit_2</tabstop>
+  <tabstop>titleLineEdit_2</tabstop>
+  <tabstop>tagsLineEdit_2</tabstop>
+  <tabstop>commentLineEdit_4</tabstop>
+  <tabstop>lineEdit</tabstop>
+  <tabstop>iSBNLineEdit_3</tabstop>
+  <tabstop>titleLineEdit_3</tabstop>
+  <tabstop>tagsLineEdit</tabstop>
+  <tabstop>commentLineEdit</tabstop>
+  <tabstop>iSBNLineEdit_4</tabstop>
+  <tabstop>titleLineEdit_4</tabstop>
+  <tabstop>nameLineEdit_4</tabstop>
+  <tabstop>commentLineEdit_3</tabstop>
+ </tabstops>
  <resources/>
  <connections>
   <connection>
-   <sender>comboBox</sender>
+   <sender>typeComboBox</sender>
    <signal>currentIndexChanged(int)</signal>
    <receiver>input_form</receiver>
    <slot>setCurrentIndex(int)</slot>
