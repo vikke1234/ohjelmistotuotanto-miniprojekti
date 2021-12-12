@@ -31,8 +31,6 @@ class TipModel(QAbstractListModel):
 
         if role == Qt.DisplayRole:
             row = index.row()
-            s = ""
-            for k, v in self.__tips[row].items():
-                if v != "":
-                    s += f"{k}: {v}\n"
-            return s
+            tip = self.__tips[row]
+            return str(tip)
+
