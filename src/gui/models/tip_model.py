@@ -33,6 +33,6 @@ class TipModel(QAbstractListModel):
             row = index.row()
             s = ""
             for k, v in self.__tips[row].items():
-                if v != "":
+                if v:
                     s += f"{k}: {v}\n"
             return s
