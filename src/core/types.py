@@ -1,7 +1,6 @@
 from attr import dataclass
 
 
-@dataclass
 class Entry:
     """
     Base class for each type of bookmark
@@ -24,7 +23,6 @@ class Entry:
                 ', '.join(self.tags),
                 self.comment
                 )
-@dataclass
 class Book(Entry):
     """
     Stores and formats text for podcasts
@@ -33,14 +31,12 @@ class Book(Entry):
         super().__init__(**kwargs)
         self.isbn = kwargs["isbn"]
 
-@dataclass
 class BlogPost(Entry):
     """
     Stores and formats text for podcasts
     """
 
 
-@dataclass
 class Podcast(Entry):
     """
     Stores and formats text for podcasts
@@ -49,7 +45,6 @@ class Podcast(Entry):
         super().__init__(**kwargs)
         self.desc = kwargs["description"]
 
-@dataclass
 class Video(Entry):
     def __init__(self, **kwargs) -> None:
         super().__init__(**kwargs)
