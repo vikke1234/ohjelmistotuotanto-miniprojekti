@@ -89,7 +89,7 @@
            </sizepolicy>
           </property>
           <property name="currentIndex">
-           <number>3</number>
+           <number>0</number>
           </property>
           <widget class="QWidget" name="book_page">
            <layout class="QFormLayout" name="formLayout_2">
@@ -285,15 +285,25 @@
             <item row="2" column="1">
              <widget class="QLineEdit" name="nameLineEdit_4"/>
             </item>
-            <item row="3" column="0">
+            <item row="4" column="0">
              <widget class="QLabel" name="commentLabel_3">
               <property name="text">
                <string>Comment</string>
               </property>
              </widget>
             </item>
-            <item row="3" column="1">
+            <item row="4" column="1">
              <widget class="QLineEdit" name="commentLineEdit_3"/>
+            </item>
+            <item row="3" column="0">
+             <widget class="QLabel" name="label_4">
+              <property name="text">
+               <string>Tags</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="1">
+             <widget class="QLineEdit" name="lineEdit_2"/>
             </item>
            </layout>
           </widget>
