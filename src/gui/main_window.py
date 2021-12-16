@@ -1,6 +1,4 @@
-from PyQt5 import QtGui
-from PyQt5.QtCore import QModelIndex
-from PyQt5.QtWidgets import QLineEdit, QListWidgetItem, QMainWindow, QWidget
+from PyQt5.QtWidgets import  QMainWindow, QWidget
 
 from gui.components.mainwindow import Ui_MainWindow
 from gui.models.tip_model import TipModel
