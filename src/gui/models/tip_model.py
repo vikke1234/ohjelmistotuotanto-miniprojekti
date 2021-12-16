@@ -1,6 +1,7 @@
 from typing import Union
 from PyQt5 import QtCore
 from PyQt5.QtCore import QAbstractListModel, QModelIndex, Qt
+from PyQt5.QtGui import QColor, QBrush, QColorConstants
 
 
 class TipModel(QAbstractListModel):
@@ -19,6 +20,9 @@ class TipModel(QAbstractListModel):
         self.__tips.append(item)
         self.endInsertRows()
 
+    def mark_as_read(self, index):
+        self.__tips[index.row()].read = True
+
     def insertRows(self, row: int, count: int, parent: QModelIndex = ...) -> bool:
         self.beginInsertRows(parent, row, row + count)
         for _ in range(count):
@@ -29,8 +33,13 @@ class TipModel(QAbstractListModel):
         if not index.isValid():
             return
 
+        row = index.row()
         if role == Qt.DisplayRole:
-            row = index.row()
             tip = self.__tips[row]
             return str(tip)
 
+        if role == QtCore.Qt.UserRole:
+            return self.__tips[row]
+
+        if role == Qt.BackgroundRole:
+            return QBrush(QColorConstants.Gray) if self.__tips[row].read else None

@@ -1,10 +1,12 @@
 from PyQt5 import QtGui
-from PyQt5.QtCore import QModelIndex
-from PyQt5.QtWidgets import QLineEdit, QListWidgetItem, QMainWindow, QWidget
+from PyQt5 import QtCore
+from PyQt5.QtCore import QEvent, QModelIndex, QObject, QUrl
+from PyQt5.QtWidgets import QLineEdit, QListWidgetItem, QMainWindow, QMenu, QWidget
 
-from .components.mainwindow import Ui_MainWindow
-from .models.tip_model import TipModel
-from src.core.types import *
+
+from core.types import Book, Podcast, Video, BlogPost
+from gui.components.mainwindow import Ui_MainWindow
+from gui.models.tip_model import TipModel
 
 
 class MainWindow(QMainWindow, Ui_MainWindow):
@@ -16,6 +18,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.setupUi(self)
         self.add_button.clicked.connect(self.add_to_list)
         self.listView.setModel(TipModel(self))
+        self.listView.installEventFilter(self)
 
     def add_to_list(self):
         """
@@ -45,4 +48,11 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         index = self.typeComboBox.currentIndex()
         item = types[index](**item_dict)
         self.listView.model().append_item(item)
-        
+        self.listView.doubleClicked.connect(self.list_double_clicked)
+
+    def list_double_clicked(self, index):
+        model = self.listView.model()
+        data = model.data(index, QtCore.Qt.UserRole)
+        if hasattr(data, "url"):
+            QtGui.QDesktopServices.openUrl(QUrl(data.url))
+            model.mark_as_read(index)
