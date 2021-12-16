@@ -9,6 +9,7 @@ class Entry:
         self.tags = kwargs["tags"].split(",")
         self.comment = kwargs["comment"]
         self.url = kwargs.get("url", "")
+        self.read = False
 
     def __str__(self) -> str:
         return "{}\n{}\n{}{}\n{}".format(

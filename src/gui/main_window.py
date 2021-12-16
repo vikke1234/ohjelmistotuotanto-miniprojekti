@@ -54,11 +54,4 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         data = model.data(index, QtCore.Qt.UserRole)
         if hasattr(data, "url"):
             QtGui.QDesktopServices.openUrl(QUrl(data.url))
-
-    def eventFilter(self, source: QObject, event: QEvent) -> bool:
-        if event.type() == QtCore.QEvent.ContextMenu and source is self.listView:
-            menu = QMenu()
-            menu.addAction("Mark as read")
-            if menu.exec_(event.globalPos()):
-                print(event.pos())
-        return super().eventFilter(source, event)
+            model.mark_as_read(index)
