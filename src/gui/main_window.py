@@ -2,9 +2,9 @@ from PyQt5 import QtGui
 from PyQt5.QtCore import QModelIndex
 from PyQt5.QtWidgets import QLineEdit, QListWidgetItem, QMainWindow, QWidget
 
-from gui.components.mainwindow import Ui_MainWindow
-from gui.models.tip_model import TipModel
-from core.types import *
+from .components.mainwindow import Ui_MainWindow
+from .models.tip_model import TipModel
+from src.core.types import *
 
 
 class MainWindow(QMainWindow, Ui_MainWindow):
