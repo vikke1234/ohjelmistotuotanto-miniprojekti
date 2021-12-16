@@ -3,9 +3,9 @@ from PyQt5 import QtCore
 from PyQt5.QtCore import QEvent, QModelIndex, QObject
 from PyQt5.QtWidgets import QLineEdit, QListWidgetItem, QMainWindow, QMenu, QWidget
 
+from core.types import Book, Podcast, Video, BlogPost
 from gui.components.mainwindow import Ui_MainWindow
 from gui.models.tip_model import TipModel
-from core.types import *
 
 
 class MainWindow(QMainWindow, Ui_MainWindow):
