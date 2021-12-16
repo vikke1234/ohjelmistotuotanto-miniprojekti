@@ -43,4 +43,3 @@ class TipModel(QAbstractListModel):
 
         if role == Qt.BackgroundRole:
             return QBrush(QColorConstants.Gray) if self.__tips[row].read else None
-

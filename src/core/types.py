@@ -1,4 +1,7 @@
+from attr import dataclass
 
+
+@dataclass
 class Entry:
     """
     Base class for each type of bookmark
@@ -12,6 +15,8 @@ class Entry:
         self.read = False
 
     def __str__(self) -> str:
+        # Can't do self.url + '\n' if using fstrings
+        # pylint: disable=C0209
         return "{}\n{}\n{}{}\n{}".format(
                 self.title,
                 self.author,
@@ -19,7 +24,7 @@ class Entry:
                 ', '.join(self.tags),
                 self.comment
                 )
-
+@dataclass
 class Book(Entry):
     """
     Stores and formats text for podcasts
@@ -28,13 +33,14 @@ class Book(Entry):
         super().__init__(**kwargs)
         self.isbn = kwargs["isbn"]
 
+@dataclass
 class BlogPost(Entry):
     """
     Stores and formats text for podcasts
     """
-    def __init__(self, **kwargs) -> None:
-        super().__init__(**kwargs)
 
+
+@dataclass
 class Podcast(Entry):
     """
     Stores and formats text for podcasts
@@ -43,6 +49,7 @@ class Podcast(Entry):
         super().__init__(**kwargs)
         self.desc = kwargs["description"]
 
+@dataclass
 class Video(Entry):
     def __init__(self, **kwargs) -> None:
         super().__init__(**kwargs)
