@@ -8,9 +8,13 @@ class TipModel(QAbstractListModel):
     def __init__(self, parent=None) -> None:
         super().__init__(parent)
         self.__tips = []
+        self.__displayed = []
 
     def rowCount(self, parent: QModelIndex = ...) -> int:
-        return len(self.__tips)
+        if len(self.__displayed) == 0:
+            return len(self.__tips)
+        else:
+            return len(self.__displayed)
 
     def append_item(self, item):
         """
@@ -34,12 +38,22 @@ class TipModel(QAbstractListModel):
             return
 
         row = index.row()
+
         if role == Qt.DisplayRole:
-            tip = self.__tips[row]
-            return str(tip)
+            if len(self.__displayed) == 0:
+                tip = self.__tips[row]
+                return str(tip)
+            else:
+                print(len(self.__displayed))
+                tip = self.__displayed[row]
+                return str(tip)
 
         if role == QtCore.Qt.UserRole:
             return self.__tips[row]
 
         if role == Qt.BackgroundRole:
             return QBrush(QColorConstants.Gray) if self.__tips[row].read else None
+
+    def filter_by_tag(self, tag: str):
+        self.__displayed = list(filter(lambda x: tag in x.tags, self.__tips))
+        

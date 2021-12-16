@@ -18,6 +18,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.add_button.clicked.connect(self.add_to_list)
         self.listView.setModel(TipModel(self))
         self.listView.installEventFilter(self)
+        self.tag_line.textChanged.connect(self.listView.model().filter_by_tag)
 
     def add_to_list(self):
         """

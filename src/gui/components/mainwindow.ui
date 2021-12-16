@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>801</width>
+    <width>805</width>
     <height>600</height>
    </rect>
   </property>
@@ -29,7 +29,7 @@
         <item>
          <widget class="QLabel" name="label_2">
           <property name="text">
-           <string>Choose the type</string>
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Choose the type to add&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
          </widget>
         </item>
@@ -93,35 +93,15 @@
           </property>
           <widget class="QWidget" name="book_page">
            <layout class="QFormLayout" name="formLayout_2">
-            <item row="5" column="0">
-             <widget class="QLabel" name="commentLabel_2">
+            <item row="1" column="0">
+             <widget class="QLabel" name="nameLabel">
               <property name="text">
-               <string>Comment</string>
+               <string>Author</string>
               </property>
              </widget>
             </item>
-            <item row="5" column="1">
-             <widget class="QLineEdit" name="commentLineEdit_2"/>
-            </item>
-            <item row="4" column="0">
-             <widget class="QLabel" name="linkLabel">
-              <property name="text">
-               <string>Tags</string>
-              </property>
-             </widget>
-            </item>
-            <item row="4" column="1">
-             <widget class="QLineEdit" name="linkLineEdit"/>
-            </item>
-            <item row="3" column="0">
-             <widget class="QLabel" name="iSBNLabel">
-              <property name="text">
-               <string>ISBN</string>
-              </property>
-             </widget>
-            </item>
-            <item row="3" column="1">
-             <widget class="QLineEdit" name="titleLineEdit"/>
+            <item row="1" column="1">
+             <widget class="QLineEdit" name="nameLineEdit"/>
             </item>
             <item row="2" column="0">
              <widget class="QLabel" name="titleLabel">
@@ -133,15 +113,121 @@
             <item row="2" column="1">
              <widget class="QLineEdit" name="iSBNLineEdit"/>
             </item>
-            <item row="1" column="1">
-             <widget class="QLineEdit" name="nameLineEdit"/>
-            </item>
-            <item row="1" column="0">
-             <widget class="QLabel" name="nameLabel">
+            <item row="3" column="0">
+             <widget class="QLabel" name="iSBNLabel">
               <property name="text">
-               <string>Author</string>
+               <string>ISBN</string>
               </property>
              </widget>
+            </item>
+            <item row="3" column="1">
+             <widget class="QLineEdit" name="titleLineEdit"/>
+            </item>
+            <item row="4" column="0">
+             <widget class="QLabel" name="linkLabel">
+              <property name="text">
+               <string>Tags</string>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="1">
+             <widget class="QLineEdit" name="linkLineEdit"/>
+            </item>
+            <item row="5" column="0">
+             <widget class="QLabel" name="commentLabel_2">
+              <property name="text">
+               <string>Comment</string>
+              </property>
+             </widget>
+            </item>
+            <item row="5" column="1">
+             <widget class="QLineEdit" name="commentLineEdit_2"/>
+            </item>
+            <item row="6" column="0">
+             <spacer name="verticalSpacer">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeType">
+               <enum>QSizePolicy::Fixed</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>40</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item row="7" column="0">
+             <widget class="QLabel" name="label_6">
+              <property name="text">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Search tips by tags&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+             </widget>
+            </item>
+            <item row="9" column="0">
+             <layout class="QHBoxLayout" name="horizontalLayout_6">
+              <item>
+               <widget class="QLabel" name="label_7">
+                <property name="text">
+                 <string>Tag</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="horizontalSpacer">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>30</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="tag_line">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="search_button">
+                <property name="maximumSize">
+                 <size>
+                  <width>60</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>Search</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item row="8" column="0">
+             <spacer name="verticalSpacer_2">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeType">
+               <enum>QSizePolicy::Fixed</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
             </item>
            </layout>
           </widget>
@@ -388,8 +474,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>801</width>
-     <height>30</height>
+     <width>805</width>
+     <height>22</height>
     </rect>
    </property>
   </widget>
