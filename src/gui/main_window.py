@@ -1,6 +1,7 @@
 from PyQt5 import QtGui
-from PyQt5.QtCore import QModelIndex
-from PyQt5.QtWidgets import QLineEdit, QListWidgetItem, QMainWindow, QWidget
+from PyQt5 import QtCore
+from PyQt5.QtCore import QEvent, QModelIndex, QObject
+from PyQt5.QtWidgets import QLineEdit, QListWidgetItem, QMainWindow, QMenu, QWidget
 
 from gui.components.mainwindow import Ui_MainWindow
 from gui.models.tip_model import TipModel
@@ -16,6 +17,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.setupUi(self)
         self.add_button.clicked.connect(self.add_to_list)
         self.listView.setModel(TipModel(self))
+        self.listView.installEventFilter(self)
 
     def add_to_list(self):
         """
@@ -45,4 +47,12 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         index = self.typeComboBox.currentIndex()
         item = types[index](**item_dict)
         self.listView.model().append_item(item)
-        
+
+    def eventFilter(self, source: QObject, event: QEvent) -> bool:
+        if event.type() == QtCore.QEvent.ContextMenu and source is self.listView:
+            menu = QMenu()
+            print("here")
+            menu.addAction("Mark as read")
+            if menu.exec_(event.globalPos()):
+                print(event.pos())
+        return super().eventFilter(source, event)
