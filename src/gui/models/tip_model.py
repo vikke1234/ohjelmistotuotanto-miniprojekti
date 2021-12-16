@@ -33,4 +33,3 @@ class TipModel(QAbstractListModel):
             row = index.row()
             tip = self.__tips[row]
             return str(tip)
-
