@@ -212,6 +212,8 @@ class Ui_MainWindow(object):
         self.listView.setSizePolicy(sizePolicy)
         self.listView.setMinimumSize(QtCore.QSize(400, 0))
         self.listView.setMaximumSize(QtCore.QSize(450, 16777215))
+        self.listView.setAlternatingRowColors(True)
+        self.listView.setSelectionMode(QtWidgets.QAbstractItemView.NoSelection)
         self.listView.setObjectName("listView")
         self.horizontalLayout_3.addWidget(self.listView)
         self.horizontalLayout_4.addLayout(self.horizontalLayout_3)
