@@ -147,16 +147,6 @@
           </widget>
           <widget class="QWidget" name="podcast_page">
            <layout class="QFormLayout" name="formLayout_4">
-            <item row="0" column="0">
-             <widget class="QLabel" name="nameLabel_2">
-              <property name="text">
-               <string>Author</string>
-              </property>
-             </widget>
-            </item>
-            <item row="0" column="1">
-             <widget class="QLineEdit" name="nameLineEdit_2"/>
-            </item>
             <item row="1" column="0">
              <widget class="QLabel" name="titleLabel_2">
               <property name="text">
@@ -167,45 +157,55 @@
             <item row="1" column="1">
              <widget class="QLineEdit" name="iSBNLineEdit_2"/>
             </item>
-            <item row="2" column="0">
+            <item row="3" column="0">
              <widget class="QLabel" name="iSBNLabel_2">
               <property name="text">
                <string>Description</string>
               </property>
              </widget>
             </item>
-            <item row="2" column="1">
+            <item row="3" column="1">
              <widget class="QLineEdit" name="titleLineEdit_2"/>
             </item>
-            <item row="3" column="0">
+            <item row="4" column="0">
              <widget class="QLabel" name="tagsLabel_2">
               <property name="text">
                <string>Tags</string>
               </property>
              </widget>
             </item>
-            <item row="3" column="1">
+            <item row="4" column="1">
              <widget class="QLineEdit" name="tagsLineEdit_2"/>
             </item>
-            <item row="4" column="0">
+            <item row="5" column="0">
              <widget class="QLabel" name="commentLabel_4">
               <property name="text">
                <string>Comment</string>
               </property>
              </widget>
             </item>
-            <item row="4" column="1">
+            <item row="5" column="1">
              <widget class="QLineEdit" name="commentLineEdit_4"/>
             </item>
-            <item row="5" column="0">
+            <item row="6" column="0">
              <widget class="QLabel" name="label_3">
               <property name="text">
                <string>URL</string>
               </property>
              </widget>
             </item>
-            <item row="5" column="1">
+            <item row="6" column="1">
              <widget class="QLineEdit" name="lineEdit"/>
+            </item>
+            <item row="2" column="0">
+             <widget class="QLabel" name="nameLabel_2">
+              <property name="text">
+               <string>Author</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="1">
+             <widget class="QLineEdit" name="nameLineEdit_2"/>
             </item>
            </layout>
           </widget>
@@ -221,35 +221,45 @@
             <item row="1" column="1">
              <widget class="QLineEdit" name="iSBNLineEdit_3"/>
             </item>
-            <item row="2" column="0">
+            <item row="3" column="0">
              <widget class="QLabel" name="iSBNLabel_3">
               <property name="text">
                <string>URL</string>
               </property>
              </widget>
             </item>
-            <item row="2" column="1">
+            <item row="3" column="1">
              <widget class="QLineEdit" name="titleLineEdit_3"/>
             </item>
-            <item row="3" column="0">
+            <item row="4" column="0">
              <widget class="QLabel" name="tagsLabel">
               <property name="text">
                <string>Tags</string>
               </property>
              </widget>
             </item>
-            <item row="3" column="1">
+            <item row="4" column="1">
              <widget class="QLineEdit" name="tagsLineEdit"/>
             </item>
-            <item row="4" column="0">
+            <item row="5" column="0">
              <widget class="QLabel" name="commentLabel">
               <property name="text">
                <string>Comment</string>
               </property>
              </widget>
             </item>
-            <item row="4" column="1">
+            <item row="5" column="1">
              <widget class="QLineEdit" name="commentLineEdit"/>
+            </item>
+            <item row="2" column="0">
+             <widget class="QLabel" name="label_5">
+              <property name="text">
+               <string>Author</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="1">
+             <widget class="QLineEdit" name="lineEdit_3"/>
             </item>
            </layout>
           </widget>
@@ -361,6 +371,12 @@
           <height>16777215</height>
          </size>
         </property>
+        <property name="alternatingRowColors">
+         <bool>true</bool>
+        </property>
+        <property name="selectionMode">
+         <enum>QAbstractItemView::NoSelection</enum>
+        </property>
        </widget>
       </item>
      </layout>
@@ -388,7 +404,6 @@
   <tabstop>add_button</tabstop>
   <tabstop>typeComboBox</tabstop>
   <tabstop>listView</tabstop>
-  <tabstop>nameLineEdit_2</tabstop>
   <tabstop>iSBNLineEdit_2</tabstop>
   <tabstop>titleLineEdit_2</tabstop>
   <tabstop>tagsLineEdit_2</tabstop>

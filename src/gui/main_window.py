@@ -1,6 +1,6 @@
 from PyQt5 import QtGui
 from PyQt5 import QtCore
-from PyQt5.QtCore import QEvent, QModelIndex, QObject
+from PyQt5.QtCore import QEvent, QModelIndex, QObject, QUrl
 from PyQt5.QtWidgets import QLineEdit, QListWidgetItem, QMainWindow, QMenu, QWidget
 
 from core.types import Book, Podcast, Video, BlogPost
@@ -47,12 +47,11 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         index = self.typeComboBox.currentIndex()
         item = types[index](**item_dict)
         self.listView.model().append_item(item)
+        self.listView.doubleClicked.connect(self.list_double_clicked)
 
-    def eventFilter(self, source: QObject, event: QEvent) -> bool:
-        if event.type() == QtCore.QEvent.ContextMenu and source is self.listView:
-            menu = QMenu()
-            print("here")
-            menu.addAction("Mark as read")
-            if menu.exec_(event.globalPos()):
-                print(event.pos())
-        return super().eventFilter(source, event)
+    def list_double_clicked(self, index):
+        model = self.listView.model()
+        data = model.data(index, QtCore.Qt.UserRole)
+        if hasattr(data, "url"):
+            QtGui.QDesktopServices.openUrl(QUrl(data.url))
+            model.mark_as_read(index)
