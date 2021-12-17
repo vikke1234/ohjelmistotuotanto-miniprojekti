@@ -8,9 +8,10 @@ class TipModel(QAbstractListModel):
     def __init__(self, parent=None) -> None:
         super().__init__(parent)
         self.__tips = []
+        self.__displayed = []
 
     def rowCount(self, parent: QModelIndex = ...) -> int:
-        return len(self.__tips)
+        return len(self.__displayed)
 
     def append_item(self, item):
         """
@@ -18,6 +19,7 @@ class TipModel(QAbstractListModel):
         """
         self.beginInsertRows(QModelIndex(), self.rowCount(), self.rowCount())
         self.__tips.append(item)
+        self.__displayed = self.__tips
         self.endInsertRows()
 
     def mark_as_read(self, index):
@@ -34,8 +36,9 @@ class TipModel(QAbstractListModel):
             return
 
         row = index.row()
+
         if role == Qt.DisplayRole:
-            tip = self.__tips[row]
+            tip = self.__displayed[row]
             return str(tip)
 
         if role == QtCore.Qt.UserRole:
@@ -43,3 +46,9 @@ class TipModel(QAbstractListModel):
 
         if role == Qt.BackgroundRole:
             return QBrush(QColorConstants.Gray) if self.__tips[row].read else None
+
+    def filter_by_tag(self, tag: str):
+        # pretty inefficent way but currently the easiest
+        self.__displayed = list(filter(lambda x: len([t for t in x.tags if t.startswith(tag)]) > 0, self.__tips))
+        self.dataChanged.emit(QModelIndex(), QModelIndex())
+
