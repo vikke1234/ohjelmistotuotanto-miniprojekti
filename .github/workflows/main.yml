@@ -25,4 +25,6 @@ jobs:
       - name: Run pylint
         run: poetry run pylint src
       - name: Run pytest
-        run: QT_DEBUG_PLUGINS=1 poetry run pytest src
+        run: poetry run pytest src
+        env:
+          QT_DEBUG_PLUGINS: 1
