@@ -10,6 +10,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
+    env:
+      QT_DEBUG_PLUGINS: 1
+      DISPLAY: xvfb
     steps:
       - uses: actions/checkout@v2
       - name: Set up Python 3.8
@@ -17,7 +20,7 @@ jobs:
         with:
           python-version: 3.8
       - name: install Qt
-        run: sudo apt-get install -y x11-utils libxkbcommon-x11-0 libxcb-randr0-dev libxcb-xtest0-dev libxcb-xinerama0-dev libxcb-shape0-dev libxcb-xkb-dev libxcb-render-util0 libxcb-icccm4 libxcb-keysyms1 libxcb-image0
+        run: sudo apt-get install -y libxcb-icccm4 libxcb-image0 libxcb-keysyms1 libxcb-randr0 libxcb-render-util0 libxcb-xinerama0 libxcb-xfixes0
       - name: Install Poetry
         run: pip install poetry
       - name: Install dependencies
@@ -26,5 +29,3 @@ jobs:
         run: poetry run pylint src
       - name: Run pytest
         run: poetry run pytest src
-        env:
-          QT_DEBUG_PLUGINS: 1
