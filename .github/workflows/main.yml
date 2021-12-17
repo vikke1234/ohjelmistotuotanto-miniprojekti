@@ -20,7 +20,7 @@ jobs:
         with:
           python-version: 3.8
       - name: install Qt
-        run: sudo apt-get install -y libxcb-icccm4 libxcb-image0 libxcb-keysyms1 libxcb-randr0 libxcb-render-util0 libxcb-xinerama0 libxcb-xfixes0 libxkbcommon-x11-0
+        run: sudo apt-get install -y libxcb-icccm4 libxcb-image0 libxcb-keysyms1 libxcb-randr0 libxcb-render-util0 libxcb-xinerama0 libxcb-xfixes0 libxkbcommon-x11-0 xvfb
       - name: Install Poetry
         run: pip install poetry
       - name: Install dependencies
@@ -28,4 +28,4 @@ jobs:
       - name: Run pylint
         run: poetry run pylint src
       - name: Run pytest
-        run: poetry run python test.py
+        run: xvfb-run poetry run pytest src
