@@ -51,4 +51,3 @@ class TipModel(QAbstractListModel):
         # pretty inefficent way but currently the easiest
         self.__displayed = list(filter(lambda x: len([t for t in x.tags if t.startswith(tag)]) > 0, self.__tips))
         self.dataChanged.emit(QModelIndex(), QModelIndex())
-
