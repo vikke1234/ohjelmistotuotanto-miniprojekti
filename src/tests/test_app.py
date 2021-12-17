@@ -1,13 +1,13 @@
 from PyQt5.QtCore import qrand
 import pytest
 import pytestqt
-from src.gui.main_window import MainWindow
+from gui.main_window import MainWindow
 
 
 def test_label2(qtbot):
     test_app = MainWindow()
     qtbot.addWidget(test_app)
-    assert test_app.label_2.text() == "Choose the type"
+    assert   "Choose the type to add" in test_app.label_2.text()
 
 def test_combo_box_default_value(qtbot):
     test_app = MainWindow()
