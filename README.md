@@ -22,5 +22,5 @@ https://docs.google.com/spreadsheets/d/1r9CDM0Wv7Pt1SwhfaGoQBJD6Y9coEpHTB04byvhg
   
   CI passing
 
-### Loppuraportti
+### Final report
 https://docs.google.com/document/d/10P4dgz7mu52sjp0lobaIyq5kNxFrIaXnUxF20Y7Ay90/edit?usp=sharing
