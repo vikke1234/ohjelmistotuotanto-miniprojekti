@@ -1,4 +1,6 @@
-# ohjelmistotuotanto-miniprojekti
+# Ohjelmistotuotanto-miniprojekti
+
+Projektina rakennettiin sovellus, jonne voi tallentaa erilaisia lukuvinkkejä.
 
 ![GitHub Actions](https://github.com/vikke1234/ohjelmistotuotanto-miniprojekti/workflows/CI/badge.svg)
 
